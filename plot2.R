@@ -6,8 +6,8 @@ library(readr)
 library(dplyr)
 library(lubridate)
 
-if (!file.exists('data/household_power_consumption.zip')) {
-  download.file(url="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "data/household_power_consumption.zip")
+if (!file.exists('household_power_consumption.zip')) {
+  download.file(url="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "household_power_consumption.zip")
 }
 
 electricPowerData <- read_delim(file = "data/household_power_consumption.zip", delim=";", na="?")
